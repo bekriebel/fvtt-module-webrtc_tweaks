@@ -1,5 +1,5 @@
 # WebRTC Tweaks
-Improvements for the WebRTC (including Jitsi) video conferencing system for FVTT.
+Improvements for the WebRTC (including [JitsiWebRTC](https://github.com/luvolondon/fvtt-module-jitsiwebrtc/)) video conferencing system for FVTT.
 
 Currently, the only improvement is the ability to move all of the video windows to different sides of the screen (left vertical, top horizonal, right vertical, and original bottom horizontal).
 
