@@ -1,0 +1,50 @@
+#camera-views.camera-position-top {
+    top: 60px;
+    bottom: unset;
+    left: 120px;
+    width: calc(100% - 440px);
+    z-index: 20;
+}
+
+#camera-views.camera-position-left {
+    top: 60px;
+    left: 120px;
+    bottom: unset;
+    flex-direction: column;
+    z-index: 20;
+}
+
+#camera-views.camera-position-right {
+    top: 60px;
+    left: unset;
+    right: 315px;
+    bottom: unset;
+    flex-direction: column;
+    z-index: 20;
+}
+
+#camera-views.camera-position-left.camera-size-large {
+    width: 320px;
+}
+#camera-views.camera-position-left.camera-size-medium {
+    width: 240px;
+}
+#camera-views.camera-position-left.camera-size-small {
+    width: 160px;
+}
+#camera-views.camera-position-left.no-video {
+    width: 160px;
+}
+
+#camera-views.camera-position-right.camera-size-large {
+    width: 320px;
+}
+#camera-views.camera-position-right.camera-size-medium {
+    width: 240px;
+}
+#camera-views.camera-position-right.camera-size-small {
+    width: 160px;
+}
+#camera-views.camera-position-right.no-video {
+    width: 160px;
+}
