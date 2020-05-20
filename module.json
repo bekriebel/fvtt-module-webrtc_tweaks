@@ -7,7 +7,8 @@
   "minimumCoreVersion": "0.5.5",
   "compatibleCoreVersion":"0.5.5",
   "scripts": [
-    "scripts/webrtc-tweaks-position.js"
+    "scripts/webrtc-tweaks-position.js",
+    "scripts/webrtc-tweaks-add-external.js"
   ],
   "styles": [
     "styles/webrtc-tweaks-position.css"
