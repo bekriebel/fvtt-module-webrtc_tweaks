@@ -1,13 +1,14 @@
 {   
-  "name": "webrtc-tweaks",   
-  "title": "WebRTC Tweaks",   
-  "description": "Improvements for the WebRTC video conferencing system",   
+  "name": "webrtc-tweaks",
+  "title": "WebRTC Tweaks",
+  "description": "Improvements for the WebRTC video conferencing system",
   "author": "bekit",
   "version": "0.1.0",
   "minimumCoreVersion": "0.5.5",
-  "compatibleCoreVersion":"0.5.5",
+  "compatibleCoreVersion":"0.5.7",
   "scripts": [
-    "scripts/webrtc-tweaks-position.js"
+    "scripts/webrtc-tweaks-position.js",
+    "scripts/webrtc-tweaks-use-jitsi-meet.js"
   ],
   "styles": [
     "styles/webrtc-tweaks-position.css"
