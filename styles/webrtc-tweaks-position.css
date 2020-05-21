@@ -21,6 +21,7 @@
     bottom: unset;
     flex-direction: column;
     z-index: 20;
+    flex-wrap: wrap-reverse;
 }
 
 #camera-views.camera-position-left.camera-size-large {
