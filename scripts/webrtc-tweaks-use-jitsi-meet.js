@@ -1,4 +1,11 @@
 class WebRTCTweaksCameraViews extends CameraViews {
+    constructor(webrtc, options) {
+        super(webrtc, options);
+
+        // Set base application so renderCameraViews hooks will be called
+        this.options.baseApplication = "CameraViews";
+    }
+
     render(force, context={}) {
         if (game.settings.get("webrtc-tweaks", "useJitsiMeet")) {
             console.log("WebRTCTweaks: useJitsiMeet set, not rendering CameraViews");

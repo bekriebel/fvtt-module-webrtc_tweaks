@@ -27,5 +27,4 @@ class WebRTCTweaksPosition {
 
 Hooks.on('ready', () => {
     Hooks.on('renderCameraViews', WebRTCTweaksPosition.onRenderCameraViews);
-    Hooks.on('renderWebRTCTweaksCameraViews', WebRTCTweaksPosition.onRenderCameraViews);
 });
