@@ -1,5 +1,5 @@
 #camera-views.camera-position-top {
-    top: 60px;
+    top: 54px;
     bottom: unset;
     left: 120px;
     width: calc(100% - 440px);
@@ -7,7 +7,7 @@
 }
 
 #camera-views.camera-position-left {
-    top: 60px;
+    top: 54px;
     left: 120px;
     bottom: unset;
     flex-direction: column;
@@ -15,9 +15,9 @@
 }
 
 #camera-views.camera-position-right {
-    top: 60px;
+    top: 54px;
     left: unset;
-    right: 315px;
+    right: 309px;
     bottom: unset;
     flex-direction: column;
     z-index: 20;
