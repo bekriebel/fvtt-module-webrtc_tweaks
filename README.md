@@ -28,10 +28,11 @@ Select the position button in the video control bar to cycle through the various
 * Users signed in to the Jitsi Meeting should not change their Display Name in the Jitsi Meet interface as this will break the connection to FVTT's camera views.
 * `Blocker User Video` and `Block User Audio` options do not work on users who are signed in to the Jitsi Meet interface.
 
-## Known issues
-* [Cameras overflow column in vertical position](https://github.com/bekriebel/fvtt-module-webrtc_tweaks/issues/2)
-
 ## Changelog
+* v0.3.0
+  * Update compatibility to FVTT v0.6.0
+  * Fix the way I was handling hooks to properly call original renderCameraViews hook
+  * Switch to controlling cameraview position & size with javascript to make it so we can adapt the the interface better and fix the overflow that was occuring in a vertical layout 
 * v0.2.0
   * Add ability to join video call with full Jitsi Meet interface
   * Minor adjustment to video location CSS
