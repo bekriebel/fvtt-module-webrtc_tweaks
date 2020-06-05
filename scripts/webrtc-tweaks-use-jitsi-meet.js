@@ -33,14 +33,9 @@ class WebRTCTweaksJitsiClient extends JitsiRTCClient {
     }
 
     static sendJoinMessage() {
-        let serverType = game.webrtc.settings.getWorldSetting("server.type");
-        let serverUrl = "beta.meet.jit.si";
+        let serverUrl = game.webrtc.client._options.hosts.domain;
         let roomId = game.webrtc.settings.getWorldSetting("server.room");
         let userId = game.userId;
-
-        if (serverType == "custom") {
-            serverUrl = game.webrtc.settings.getWorldSetting("server.url");
-        }
 
         let url = "https://" + serverUrl + "/" + roomId + "#userInfo.displayName=%22" + userId + "%22";
 
