@@ -30,6 +30,9 @@ Select the position button in the video control bar to cycle through the various
 
 ## Changelog
 * v0.3.1
+  * Update compatibility to FVTT v0.6.1
+  * Pull server URL from the webrtc options for consistency
+* v0.3.1
   * Fix server variable error when using default Jitsi server
 * v0.3.0
   * Update compatibility to FVTT v0.6.0
