@@ -1,51 +1,57 @@
 #camera-views.camera-position-top {
-    top: 54px;
-    bottom: unset;
-    left: 120px;
-    width: calc(100% - 440px);
-    z-index: 20;
+  top: 54px;
+  bottom: unset;
+  left: 120px;
+  width: calc(100% - 440px);
+  z-index: 20;
 }
 
 #camera-views.camera-position-left {
-    top: 54px;
-    left: 120px;
-    bottom: unset;
-    flex-direction: column;
-    z-index: 20;
+  top: 54px;
+  left: 120px;
+  bottom: unset;
+  flex-direction: column;
+  z-index: 20;
 }
 
 #camera-views.camera-position-right {
-    top: 54px;
-    left: unset;
-    right: 309px;
-    bottom: unset;
-    flex-direction: column;
-    z-index: 20;
-    flex-wrap: wrap-reverse;
+  top: 54px;
+  left: unset;
+  right: 309px;
+  bottom: unset;
+  flex-direction: column;
+  z-index: 20;
+  flex-wrap: wrap-reverse;
 }
 
 #camera-views.camera-position-left.camera-size-large {
-    width: 320px;
+  width: 320px;
 }
+
 #camera-views.camera-position-left.camera-size-medium {
-    width: 240px;
+  width: 240px;
 }
+
 #camera-views.camera-position-left.camera-size-small {
-    width: 160px;
+  width: 160px;
 }
+
 #camera-views.camera-position-left.no-video {
-    width: 160px;
+  width: 160px;
 }
 
 #camera-views.camera-position-right.camera-size-large {
-    width: 320px;
+  width: 320px;
 }
+
 #camera-views.camera-position-right.camera-size-medium {
-    width: 240px;
+  width: 240px;
 }
+
 #camera-views.camera-position-right.camera-size-small {
-    width: 160px;
+  width: 160px;
 }
+
 #camera-views.camera-position-right.no-video {
-    width: 160px;
+  width: 160px;
 }
