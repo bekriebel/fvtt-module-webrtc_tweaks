@@ -29,6 +29,9 @@ Select the position button in the video control bar to cycle through the various
 * `Blocker User Video` and `Block User Audio` options do not work on users who are signed in to the Jitsi Meet interface.
 
 ## Changelog
+* v0.3.4
+  * Update compatibility to FVTT v0.6.4
+  * Fix href url quoting
 * v0.3.3
   * Update compatibility to FVTT v0.6.2
   * Format and fix code with ESLint
