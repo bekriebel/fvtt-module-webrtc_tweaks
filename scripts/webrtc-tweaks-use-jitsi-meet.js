@@ -44,7 +44,7 @@ class WebRTCTweaksJitsiClient extends JitsiRTCClient {
     const url = `https://${serverUrl}/${roomId}#userInfo.displayName=%22${userId}%22`;
 
     const chatData = {
-      content: `<a href=${url}>Join Jitsi Meeting</a>`,
+      content: `<a href="${url}">Join Jitsi Meeting</a>`,
       speaker: {
         scene: null, actor: null, token: null, alias: 'WebRTC Tweaks',
       },
