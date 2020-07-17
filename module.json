@@ -3,9 +3,9 @@
   "title": "WebRTC Tweaks",
   "description": "Improvements for the WebRTC video conferencing system",
   "author": "bekit",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "minimumCoreVersion": "0.5.5",
-  "compatibleCoreVersion": "0.6.4",
+  "compatibleCoreVersion": "0.7.0",
   "scripts": [
     "scripts/webrtc-tweaks-position.js",
     "scripts/webrtc-tweaks-use-jitsi-meet.js"
@@ -15,5 +15,5 @@
   ],
   "url": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks",
   "manifest": "https://raw.githubusercontent.com/bekriebel/fvtt-module-webrtc_tweaks/master/module.json",
-  "download": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/archive/v0.3.4.zip"
+  "download": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/archive/v0.4.0.zip"
 }

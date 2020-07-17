@@ -29,6 +29,9 @@ Select the position button in the video control bar to cycle through the various
 * `Blocker User Video` and `Block User Audio` options do not work on users who are signed in to the Jitsi Meet interface.
 
 ## Changelog
+* v0.4.0
+  * Update compatibility to FVTT v0.7.0
+  * Move the Change Position to the left bar so it is always visible and to de-clutter the bottom navigation bar. Fixes: [Issue #6](https://github.com/bekriebel/fvtt-module-webrtc_tweaks/issues/6)
 * v0.3.4
   * Update compatibility to FVTT v0.6.4
   * Fix href url quoting
