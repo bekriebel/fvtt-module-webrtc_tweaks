@@ -1,6 +1,7 @@
 class WebRTCTweaksPosition {
   static onRenderCameraViews(cameraviews, html) {
-    const element = html.find('[data-action="change-size"]');
+    const cameraBox = html.find(`[data-user="${game.user.id}"]`);
+    const element = cameraBox.find('[data-action="toggle-popout"]');
     WebRTCTweaksPosition.addPositionButton(element, cameraviews);
     WebRTCTweaksPosition.setStyle(cameraviews, html);
   }
@@ -84,7 +85,7 @@ class WebRTCTweaksPosition {
   static addPositionButton(element, cameraviews) {
     // Can't find it?
     if (element.length !== 1) {
-      console.log("WebRTCTweaks: Can't find CameraView change-size element", element);
+      console.log("WebRTCTweaks: Can't find CameraView toggle-popout element", element);
       return;
     }
     const positionButton = $('<a class="av-control toggle" title="Change Position"><i class="fas fa-arrows-alt"></i></a>');
