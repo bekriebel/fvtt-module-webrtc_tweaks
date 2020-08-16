@@ -24,20 +24,27 @@ class WebRTCTweaksJitsiClient extends JitsiRTCClient {
     return super.initialize();
   }
 
-  async connect({
-    host, room, username, password,
-  } = {}) {
-    if (game.settings.get('webrtc-tweaks', 'useJitsiMeet')) {
+  async connect(connectionOptions) {
+    if (WebRTCTweaksJitsiClient.jitsirtcActive && game.settings.get('webrtc-tweaks', 'useJitsiMeet')) {
       console.log('WebRTCTweaks: useJitsiMeet set, not connecting to WebRTC');
+      WebRTCTweaksJitsiClient.sendJoinMessage(connectionOptions);
       return true;
     }
-    return super.connect({
-      host, room, username, password,
-    });
+
+    return super.connect(connectionOptions);
   }
 
-  static sendJoinMessage() {
-    const serverUrl = game.webrtc.client._options.hosts.domain;
+  async initLocalStream(audioSrc, videoSrc) {
+    if (WebRTCTweaksJitsiClient.jitsirtcActive && game.settings.get('webrtc-tweaks', 'useJitsiMeet')) {
+      return new MediaStream();
+    }
+
+    return super.initLocalStream(audioSrc, videoSrc);
+  }
+
+  static sendJoinMessage(connectionOptions) {
+    // Set server url, defaulting to Jitsi Meet server
+    const serverUrl = connectionOptions.host ?? JitsiRTCClient.defaultJitsiServer;
     const roomId = game.webrtc.settings.getWorldSetting('server.room');
     const { userId } = game;
 
@@ -52,8 +59,6 @@ class WebRTCTweaksJitsiClient extends JitsiRTCClient {
     };
     ChatMessage.create(chatData, {});
   }
-
-    static jitsirtcActive = false;
 }
 
 Hooks.on('init', () => {
@@ -74,11 +79,5 @@ Hooks.on('init', () => {
   if (WebRTCTweaksJitsiClient.jitsirtcActive) {
     CONFIG.ui.webrtc = WebRTCTweaksCameraViews;
     CONFIG.WebRTC.clientClass = WebRTCTweaksJitsiClient;
-  }
-});
-
-Hooks.on('ready', () => {
-  if (WebRTCTweaksJitsiClient.jitsirtcActive && game.settings.get('webrtc-tweaks', 'useJitsiMeet')) {
-    WebRTCTweaksJitsiClient.sendJoinMessage();
   }
 });
