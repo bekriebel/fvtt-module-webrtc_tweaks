@@ -31,7 +31,7 @@ Select the position button in the video control bar to cycle through the various
 ## Changelog
 * v0.4.1
   * Update compatibility to FVTT v0.7.1
-  * Update to support Jitsi WebRTC Client v0.4.0
+  * Update to support Jitsi WebRTC Client v0.3.0
 * v0.4.0
   * Update compatibility to FVTT v0.7.0
   * Move the Change Position to the left bar so it is always visible and to de-clutter the bottom navigation bar. Fixes: [Issue #6](https://github.com/bekriebel/fvtt-module-webrtc_tweaks/issues/6)
