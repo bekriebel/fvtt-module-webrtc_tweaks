@@ -7,8 +7,7 @@
   "minimumCoreVersion": "0.5.5",
   "compatibleCoreVersion": "0.7.1",
   "scripts": [
-    "scripts/webrtc-tweaks-position.js",
-    "scripts/webrtc-tweaks-use-jitsi-meet.js"
+    "scripts/webrtc-tweaks-position.js"
   ],
   "styles": [
     "styles/webrtc-tweaks-position.css"
