@@ -22,7 +22,7 @@ class WebRTCTweaksPosition {
   }
 
   static setStyle(cameraviews, html) {
-    const { dockPosition } = cameraviews.webrtc.settings;
+    const { dockPosition } = cameraviews.webrtc.settings.client;
     switch (dockPosition) {
       case "left":
         this.setTop(html, dockPosition);
@@ -66,8 +66,8 @@ class WebRTCTweaksPosition {
   static setWidth(cameraviews, html) {
     // Check if the player list is visible
     let hidePlayerList = true;
-    if (cameraviews.webrtc.settings.dockPosition === "left") {
-      hidePlayerList = cameraviews.webrtc.settings.hidePlayerList;
+    if (cameraviews.webrtc.settings.client.dockPosition === "left") {
+      hidePlayerList = cameraviews.webrtc.settings.client.hidePlayerList;
     }
 
     // Determine the desired width
@@ -77,7 +77,7 @@ class WebRTCTweaksPosition {
     );
 
     // Set the width so that the height auto adjusts
-    if (desiredWidth < this.cameraViewMaxWidth(cameraviews.webrtc.settings.dockSize)) {
+    if (desiredWidth < this.cameraViewMaxWidth(cameraviews.webrtc.settings.client.dockSize)) {
       html.width(desiredWidth);
     }
   }
@@ -96,9 +96,9 @@ class WebRTCTweaksPosition {
   static onPositionButtonClicked(event, cameraviews) {
     const cameraViews = cameraviews;
     const positions = ["top", "right", "bottom", "left"];
-    const position = positions.indexOf(cameraviews.webrtc.settings.dockPosition);
+    const position = positions.indexOf(cameraviews.webrtc.settings.client.dockPosition);
     const nextPosition = position + 1 >= positions.length ? 0 : position + 1;
-    cameraViews.webrtc.settings.dockPosition = positions[nextPosition];
+    cameraViews.webrtc.settings.client.dockPosition = positions[nextPosition];
 
     cameraViews.render(true);
   }
