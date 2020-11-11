@@ -24,14 +24,14 @@ class WebRTCTweaksPosition {
   static setStyle(cameraviews, html) {
     const { dockPosition } = cameraviews.webrtc.settings;
     switch (dockPosition) {
-      case 'left':
+      case "left":
         this.setTop(html, dockPosition);
         this.setWidth(cameraviews, html);
         break;
-      case 'top':
+      case "top":
         this.setTop(html, dockPosition);
         break;
-      case 'right':
+      case "right":
         this.setTop(html, dockPosition);
         this.setWidth(cameraviews, html);
         this.setLeft(html);
@@ -45,10 +45,10 @@ class WebRTCTweaksPosition {
   static setTop(html, dockPosition) {
     let topPosition = ui.nav.element.offset().top;
 
-    if (!ui.nav._collapsed && (!ui.sidebar._collapsed || dockPosition !== 'right')) {
+    if (!ui.nav._collapsed && (!ui.sidebar._collapsed || dockPosition !== "right")) {
       topPosition += ui.nav.element.height();
-    } else if (dockPosition !== 'right') {
-      const toggleElement = ui.nav.element.find('#nav-toggle');
+    } else if (dockPosition !== "right") {
+      const toggleElement = ui.nav.element.find("#nav-toggle");
       topPosition += toggleElement.height() + 10;
     }
 
@@ -66,7 +66,7 @@ class WebRTCTweaksPosition {
   static setWidth(cameraviews, html) {
     // Check if the player list is visible
     let hidePlayerList = true;
-    if (cameraviews.webrtc.settings.dockPosition === 'left') {
+    if (cameraviews.webrtc.settings.dockPosition === "left") {
       hidePlayerList = cameraviews.webrtc.settings.hidePlayerList;
     }
 
@@ -85,17 +85,17 @@ class WebRTCTweaksPosition {
   static addPositionButton(element, cameraviews) {
     // Can't find it?
     if (element.length !== 1) {
-      console.log("WebRTCTweaks: Can't find CameraView toggle-popout element", element);
+      console.warn("WebRTCTweaks: Can't find CameraView toggle-popout element", element);
       return;
     }
     const positionButton = $('<a class="av-control toggle" title="Change Position"><i class="fas fa-arrows-alt"></i></a>');
-    positionButton.on('click', (event) => WebRTCTweaksPosition.onPositionButtonClicked(event, cameraviews));
+    positionButton.on("click", (event) => WebRTCTweaksPosition.onPositionButtonClicked(event, cameraviews));
     element.after(positionButton);
   }
 
   static onPositionButtonClicked(event, cameraviews) {
     const cameraViews = cameraviews;
-    const positions = ['top', 'right', 'bottom', 'left'];
+    const positions = ["top", "right", "bottom", "left"];
     const position = positions.indexOf(cameraviews.webrtc.settings.dockPosition);
     const nextPosition = position + 1 >= positions.length ? 0 : position + 1;
     cameraViews.webrtc.settings.dockPosition = positions[nextPosition];
@@ -126,13 +126,13 @@ class WebRTCTweaksPosition {
   static cameraViewMaxWidth(dockSize) {
     let maxWidth = 320;
     switch (dockSize) {
-      case 'large':
+      case "large":
         maxWidth = 320;
         break;
-      case 'medium':
+      case "medium":
         maxWidth = 240;
         break;
-      case 'small':
+      case "small":
         maxWidth = 160;
         break;
       default:
@@ -142,9 +142,9 @@ class WebRTCTweaksPosition {
   }
 }
 
-Hooks.on('ready', () => {
-  Hooks.on('renderCameraViews', WebRTCTweaksPosition.onRenderCameraViews);
-  Hooks.on('sidebarCollapse', WebRTCTweaksPosition.onSidebarCollapse);
-  Hooks.on('collapseSceneNavigation', WebRTCTweaksPosition.onCollapseSceneNavigation);
-  window.addEventListener('resize', WebRTCTweaksPosition.onResize);
+Hooks.on("ready", () => {
+  Hooks.on("renderCameraViews", WebRTCTweaksPosition.onRenderCameraViews);
+  Hooks.on("sidebarCollapse", WebRTCTweaksPosition.onSidebarCollapse);
+  Hooks.on("collapseSceneNavigation", WebRTCTweaksPosition.onCollapseSceneNavigation);
+  window.addEventListener("resize", WebRTCTweaksPosition.onResize);
 });
