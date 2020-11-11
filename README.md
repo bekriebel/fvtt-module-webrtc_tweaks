@@ -13,6 +13,10 @@ Select the position button in the video control bar to cycle through the various
 ![position button example](https://raw.githubusercontent.com/bekriebel/fvtt-module-webrtc_tweaks/master/images/example_position.png)
 
 ## Changelog
+* v0.5.0
+  * Update compatibility to FVTT v0.7.6
+  * Remove support for versions less than FVTT v0.7.2
+  * Remove the "Use full Jitsi Meet client" option as it has been ported to the main JitsiWebRTC module
 * v0.4.1
   * Update compatibility to FVTT v0.7.1
   * Update to support Jitsi WebRTC Client v0.3.0
