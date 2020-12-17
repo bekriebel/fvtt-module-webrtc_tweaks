@@ -13,6 +13,10 @@ Select the position button in the video control bar to cycle through the various
 ![position button example](https://raw.githubusercontent.com/bekriebel/fvtt-module-webrtc_tweaks/main/images/example_position.png)
 
 ## Changelog
+* v0.5.1
+  * Update compatibility to FVTT v0.7.8
+  * Add GitHub Action workflow for automated release
+  * Change default branch to "main"
 * v0.5.0
   * Update compatibility to FVTT v0.7.6
   * Remove support for versions less than FVTT v0.7.2
