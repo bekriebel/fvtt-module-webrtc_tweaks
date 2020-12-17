@@ -13,6 +13,6 @@
     "styles/webrtc-tweaks-position.css"
   ],
   "url": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks",
-  "manifest": "https://raw.githubusercontent.com/bekriebel/fvtt-module-webrtc_tweaks/main/module.json",
-  "download": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/archive/v0.5.0.zip"
+  "manifest": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/releases/latest/download/module.json",
+  "download": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/releases/latest/download/fvtt-module-webrtc_tweaks.zip"
 }
