@@ -3,9 +3,9 @@
   "title": "WebRTC Tweaks",
   "description": "Improvements for the WebRTC video conferencing system",
   "author": "bekit",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "minimumCoreVersion": "0.7.2",
-  "compatibleCoreVersion": "0.7.8",
+  "compatibleCoreVersion": "0.7.9",
   "scripts": [
     "scripts/webrtc-tweaks-position.js"
   ],
