@@ -1,3 +1,6 @@
+# v0.5.3
+* Update compatibility to FVTT v0.8.0
+
 # v0.5.2
 * Update compatibility to FVTT v0.7.9
 * Update workflow to include git hash in release message
