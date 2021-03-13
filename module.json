@@ -2,6 +2,7 @@
   "name": "webrtc-tweaks",
   "title": "WebRTC Tweaks",
   "description": "Improvements for the WebRTC video conferencing system",
+  "author": "bekit",
   "authors": [
     {
       "name": "bekit",
