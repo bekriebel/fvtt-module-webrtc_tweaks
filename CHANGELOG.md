@@ -1,3 +1,7 @@
+# v0.5.6
+* Switch to esmodule format for easier maintenance
+* Update compatibility to FVTT v0.8.5
+
 # v0.5.5
 * Update compatibility to FVTT v0.8.1
 
