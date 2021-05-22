@@ -18,13 +18,28 @@
   "minimumCoreVersion": "0.7.2",
   "compatibleCoreVersion": "0.8.1",
   "manifestPlusVersion": "1.1.0",
-  "scripts": [
-    "scripts/webrtc-tweaks-position.js"
+  "esmodules": [
+    "src/webrtc-tweaks.js"
   ],
   "styles": [
     "styles/webrtc-tweaks-position.css"
   ],
   "url": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks",
   "manifest": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/releases/latest/download/module.json",
-  "download": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/releases/latest/download/fvtt-module-webrtc_tweaks.zip"
+  "download": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/releases/latest/download/fvtt-module-webrtc_tweaks.zip",
+  "readme": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/blob/main/README.md",
+  "changelog": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/blob/main/CHANGELOG.md",
+  "bugs": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/issues",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    }
+  ]
 }

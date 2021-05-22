@@ -1,4 +1,6 @@
-class WebRTCTweaksPosition {
+import * as log from "./Logging.js";
+
+export default class WebRTCTweaksPosition {
   static onRenderCameraViews(cameraviews, html) {
     const cameraBox = html.find(`[data-user="${game.user.id}"]`);
     const element = cameraBox.find('[data-action="toggle-popout"]');
@@ -85,7 +87,7 @@ class WebRTCTweaksPosition {
   static addPositionButton(element, cameraviews) {
     // Can't find it?
     if (element.length !== 1) {
-      console.warn("WebRTCTweaks: Can't find CameraView toggle-popout element", element);
+      log.warn("Can't find CameraView toggle-popout element", element);
       return;
     }
     const positionButton = $('<a class="av-control toggle" title="Change Position"><i class="fas fa-arrows-alt"></i></a>');
@@ -141,10 +143,3 @@ class WebRTCTweaksPosition {
     return maxWidth;
   }
 }
-
-Hooks.on("ready", () => {
-  Hooks.on("renderCameraViews", WebRTCTweaksPosition.onRenderCameraViews);
-  Hooks.on("sidebarCollapse", WebRTCTweaksPosition.onSidebarCollapse);
-  Hooks.on("collapseSceneNavigation", WebRTCTweaksPosition.onCollapseSceneNavigation);
-  window.addEventListener("resize", WebRTCTweaksPosition.onResize);
-});

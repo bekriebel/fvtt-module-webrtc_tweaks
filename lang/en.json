@@ -1,0 +1,4 @@
+{
+    "WEBRTC-TWEAKS.debug": "Enable debug logging",
+    "WEBRTC-TWEAKS.debugHint": "Enables debug and info logging levels"
+}
