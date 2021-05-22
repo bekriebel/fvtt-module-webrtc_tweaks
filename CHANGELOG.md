@@ -1,3 +1,6 @@
+# v0.5.7
+* Fix github workflow for packaging of language files
+
 # v0.5.6
 * Switch to esmodule format for easier maintenance
 * Update compatibility to FVTT v0.8.5
