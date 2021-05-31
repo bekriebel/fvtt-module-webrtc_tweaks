@@ -1,4 +1,4 @@
-import * as log from "./Logging.js";
+import * as log from "./utils/logging.js";
 
 export default class WebRTCTweaksPosition {
   static onRenderCameraViews(cameraviews, html) {

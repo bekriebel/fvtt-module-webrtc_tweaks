@@ -1,8 +1,14 @@
-import WebRTCTweaksPosition from "./WebRTCTweaksPosition.js";
+import registerModuleSettings from "./registerModuleSettings.js";
+import WebRTCTweaksPosition from "../WebRTCTweaksPosition.js";
 
 /* -------------------------------------------- */
 /*  Hook calls                                  */
 /* -------------------------------------------- */
+
+Hooks.once("init", () => {
+  // Register module settings
+  registerModuleSettings();
+});
 
 Hooks.on("ready", () => {
   Hooks.on("renderCameraViews", WebRTCTweaksPosition.onRenderCameraViews);
