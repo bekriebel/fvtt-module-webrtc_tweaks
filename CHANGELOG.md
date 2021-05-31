@@ -1,3 +1,7 @@
+# v0.5.8
+* Minor refactor for more consistency
+* Update compatible FVTT version to v0.8.6
+
 # v0.5.7
 * Fix github workflow for packaging of language files
 
