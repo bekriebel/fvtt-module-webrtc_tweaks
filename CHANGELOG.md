@@ -1,3 +1,7 @@
+# v0.5.9
+* Minor refactor for more consistency
+* Update compatible FVTT version to v0.8.8
+
 # v0.5.8
 * Minor refactor for more consistency
 * Update compatible FVTT version to v0.8.6
