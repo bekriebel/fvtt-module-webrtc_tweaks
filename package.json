@@ -1,0 +1,36 @@
+{
+  "name": "webrtc-tweaks",
+  "description": "Improvements for the WebRTC video conferencing system",
+  "private": true,
+  "repository": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks",
+  "author": "Brint E. Kriebel <fvtt-module-help@bekit.net>",
+  "license": "Hippocratic-2.1",
+  "scripts": {
+    "watch": "webpack --watch --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "build:dev": "webpack --config webpack.dev.js"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@league-of-foundry-developers/foundry-vtt-types": "^0.8.9-2",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "buffer": "^6.0.3",
+    "copy-webpack-plugin": "^9.0.1",
+    "crypto-browserify": "^3.12.0",
+    "eslint": "^7.32.0",
+    "process": "^0.11.10",
+    "source-map-loader": "^3.0.0",
+    "stream-browserify": "^3.0.0",
+    "terser-webpack-plugin": "^5.1.4",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "util": "^0.12.4",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-merge": "^5.8.0"
+  }
+}

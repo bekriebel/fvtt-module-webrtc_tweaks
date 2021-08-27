@@ -18,12 +18,8 @@
   "minimumCoreVersion": "0.7.2",
   "compatibleCoreVersion": "0.8.8",
   "manifestPlusVersion": "1.1.0",
-  "esmodules": [
-    "src/webrtc-tweaks.js"
-  ],
-  "styles": [
-    "styles/webrtc-tweaks-position.css"
-  ],
+  "esmodules": ["webrtc-tweaks.bundle.js"],
+  "styles": ["css/webrtc-tweaks-position.css"],
   "url": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks",
   "manifest": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/releases/latest/download/module.json",
   "download": "https://github.com/bekriebel/fvtt-module-webrtc_tweaks/releases/latest/download/fvtt-module-webrtc_tweaks.zip",
