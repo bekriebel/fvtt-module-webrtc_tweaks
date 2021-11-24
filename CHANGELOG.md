@@ -1,3 +1,10 @@
+# v0.6.0
+
+- Convert to typescript
+- Update dependencies
+- Update for FVTT v9.231 compatibility
+- Format markdown documents
+
 # v0.5.9
 
 - Minor refactor for more consistency
