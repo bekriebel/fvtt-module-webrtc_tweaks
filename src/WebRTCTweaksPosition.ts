@@ -2,6 +2,11 @@ import { getGame } from "./utils/helpers";
 import * as log from "./utils/logging";
 
 export default class WebRTCTweaksPosition {
+  // Is the FVTT server version 9. TODO: Remove if we drop support for lower versions
+  static isVersion9(): boolean {
+    return isNewerVersion(getGame().version || getGame().data.version, "9");
+  }
+
   static addPositionButton(
     element: JQuery<HTMLElement>,
     cameraviews: CameraViews
@@ -134,33 +139,49 @@ export default class WebRTCTweaksPosition {
         this.setWidth(cameraviews, html);
         this.setLeft(html);
         break;
+      case "bottom":
+        this.setBottom(html);
+        break;
       default:
         break;
     }
   }
 
+  static setBottom(html: JQuery<HTMLElement>): void {
+    if (this.isVersion9()) {
+      const uiBottom = document.getElementById("ui-bottom");
+      if (uiBottom) {
+        html.prependTo(uiBottom);
+      }
+    }
+  }
+
   // Set the top to adjust for the nav bar
   static setTop(html: JQuery<HTMLElement>, dockPosition: string): void {
-    let topPosition = ui.nav?.element.offset()?.top;
-
-    if (!topPosition) {
-      log.warn("Unable to determine top position; skipping setTops");
-      return;
+    if (this.isVersion9()) {
+      const uiTop = document.getElementById("ui-top");
+      if (uiTop) {
+        html.appendTo(uiTop);
+      }
+    } else {
+      let topPosition = ui.nav?.element.offset()?.top;
+      if (!topPosition) {
+        log.warn("Unable to determine top position; skipping setTops");
+        return;
+      }
+      if (
+        !ui.nav?.element.hasClass("collapsed") &&
+        (!ui.sidebar?.element.hasClass("collapsed") || dockPosition !== "right")
+      ) {
+        const navHeight = ui.nav?.element.height();
+        if (navHeight) topPosition += navHeight;
+      } else if (dockPosition !== "right") {
+        const toggleElement = ui.nav?.element.find("#nav-toggle");
+        const toggleElementHeight = toggleElement?.height();
+        if (toggleElementHeight) topPosition += toggleElementHeight + 10;
+      }
+      html.offset({ top: topPosition });
     }
-
-    if (
-      !ui.nav?.element.hasClass("collapsed") &&
-      (!ui.sidebar?.element.hasClass("collapsed") || dockPosition !== "right")
-    ) {
-      const navHeight = ui.nav?.element.height();
-      if (navHeight) topPosition += navHeight;
-    } else if (dockPosition !== "right") {
-      const toggleElement = ui.nav?.element.find("#nav-toggle");
-      const toggleElementHeight = toggleElement?.height();
-      if (toggleElementHeight) topPosition += toggleElementHeight + 10;
-    }
-
-    html.offset({ top: topPosition });
   }
 
   // Set the width to adjust the height since flexbox doesn't handle this well in CSS

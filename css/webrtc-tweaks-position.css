@@ -1,4 +1,5 @@
 #camera-views.camera-position-top {
+  align-items: unset;
   top: 54px;
   bottom: unset;
   left: 120px;
@@ -15,7 +16,6 @@
 }
 
 #camera-views.camera-position-right {
-  top: 54px;
   left: unset;
   right: 309px;
   bottom: unset;
@@ -54,4 +54,8 @@
 
 #camera-views.camera-position-right.no-video {
   width: 160px;
+}
+
+.camera-view .control-bar.left {
+  z-index: 20;
 }

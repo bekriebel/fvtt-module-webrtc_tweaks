@@ -10,7 +10,7 @@ Hooks.once("init", () => {
   registerModuleSettings();
 });
 
-Hooks.on("ready", () => {
+Hooks.on("setup", () => {
   Hooks.on("renderCameraViews", WebRTCTweaksPosition.onRenderCameraViews);
   Hooks.on("collapseSidebar", WebRTCTweaksPosition.onCollapseSidebar);
   Hooks.on("sidebarCollapse", WebRTCTweaksPosition.onCollapseSidebar); // Legacy name

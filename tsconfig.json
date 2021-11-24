@@ -4,7 +4,10 @@
     "sourceMap": true,
     "strict": true,
     "target": "ES2020",
-    "types": ["@league-of-foundry-developers/foundry-vtt-types"]
+    "types": [
+      "@league-of-foundry-developers/foundry-vtt-types",
+      "./types/webrtc-tweaks"
+    ]
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules"]
