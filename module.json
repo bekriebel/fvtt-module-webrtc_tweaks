@@ -14,9 +14,9 @@
       "twitter": "@bekit"
     }
   ],
-  "version": "0.6.0",
+  "version": "0.6.1",
   "minimumCoreVersion": "0.7.2",
-  "compatibleCoreVersion": "9.231",
+  "compatibleCoreVersion": "10",
   "manifestPlusVersion": "1.2.0",
   "esmodules": ["webrtc-tweaks.bundle.js"],
   "styles": ["css/webrtc-tweaks-position.css"],

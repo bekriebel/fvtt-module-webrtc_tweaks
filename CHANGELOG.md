@@ -1,3 +1,9 @@
+# v0.6.1
+
+- Update dependencies
+- Update typescript for FVTT v9+ compatibility
+- Set module compatibility to FVTT v10
+
 # v0.6.0
 
 - Convert to typescript
