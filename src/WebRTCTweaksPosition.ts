@@ -4,7 +4,10 @@ import * as log from "./utils/logging";
 export default class WebRTCTweaksPosition {
   // Is the FVTT server version 9. TODO: Remove if we drop support for lower versions
   static isVersion9(): boolean {
-    return isNewerVersion(getGame().version || getGame().data.version, "9");
+    return isNewerVersion(
+      getGame().version || getGame().data.version || 0,
+      "9"
+    );
   }
 
   static addPositionButton(
